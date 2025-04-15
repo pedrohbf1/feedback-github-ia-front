@@ -2,10 +2,6 @@
 
 Uma aplicação React que permite ao usuário obter **feedback automatizado baseado no seu perfil do GitHub**. A ferramenta analisa o nome de usuário fornecido, consulta os dados do perfil e retorna uma análise personalizada e estilizada em Markdown.
 
-## 📸 Demonstração
-
-_Interface moderna e responsiva_
-
 ## 🧠 Funcionalidades
 
 - 🔍 Entrada de nome de usuário do GitHub
@@ -13,9 +9,8 @@ _Interface moderna e responsiva_
 - 🎨 Exibição estilizada de feedback (suporte a Markdown)
 - 🌈 UI moderna com animações via Framer Motion
 - 💡 Loading animado durante a análise
-- 📜 Feedback formatado com destaque para listas, títulos e muito mais
-
-## ⚙️ Tecnologias Utilizadas
+- 📜 Feedback formatado com destaque para listas, links, títulos e muito mais
+- [ ] ⚙️ Tecnologias Utilizadas
 
 - **React** – Biblioteca principal da UI
 - **TypeScript** – Tipagem estática
