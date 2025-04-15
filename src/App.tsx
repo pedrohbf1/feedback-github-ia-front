@@ -116,12 +116,13 @@ export default function GitHubFeedback() {
                     <div className="absolute top-0 left-0 w-1 h-full bg-slate-800 rounded-full" />
                     <div
                       className="pl-6 gap-6 flex flex-col prose prose-slate max-w-none 
-  prose-headings:font-medium prose-headings:text-slate-800 
-  prose-p:text-slate-600 prose-strong:text-slate-700 
-  prose-a:text-slate-800 prose-a:no-underline prose-a:font-medium 
-  hover:prose-a:underline prose-li:text-slate-600 
-  prose-p:leading-relaxed prose-li:leading-relaxed 
-  [ul>li]:mb-2 feedback-div-custom"
+                        prose-headings:font-medium prose-headings:text-slate-800 
+                        prose-p:text-slate-600 prose-strong:text-slate-700 
+                        prose-a:text-slate-800 prose-a:no-underline prose-a:font-medium 
+                        hover:prose-a:underline prose-li:text-slate-600 
+                        prose-p:leading-relaxed prose-li:leading-relaxed 
+                        [ul>li]:mb-2 feedback-div-custom
+                      "
                       dangerouslySetInnerHTML={{ __html: marked(feedback) }}
                     />
                   </div>
