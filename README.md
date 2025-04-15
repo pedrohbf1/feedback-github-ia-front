@@ -1,54 +1,95 @@
-# React + TypeScript + Vite
+# 🚀 GitHub Feedback
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação React que permite ao usuário obter **feedback automatizado baseado no seu perfil do GitHub**. A ferramenta analisa o nome de usuário fornecido, consulta os dados do perfil e retorna uma análise personalizada e estilizada em Markdown.
 
-Currently, two official plugins are available:
+## 📸 Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+_Interface moderna e responsiva_
 
-## Expanding the ESLint configuration
+## 🧠 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 Entrada de nome de usuário do GitHub
+- 🧾 Geração de feedback em tempo real com base no perfil
+- 🎨 Exibição estilizada de feedback (suporte a Markdown)
+- 🌈 UI moderna com animações via Framer Motion
+- 💡 Loading animado durante a análise
+- 📜 Feedback formatado com destaque para listas, títulos e muito mais
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## ⚙️ Tecnologias Utilizadas
+
+- **React** – Biblioteca principal da UI
+- **TypeScript** – Tipagem estática
+- **Tailwind CSS** – Estilização moderna e utilitária
+- **Framer Motion** – Animações suaves
+- **React Query** – Gerenciamento de requisições e cache
+- **Marked** – Parser de Markdown para HTML
+- **Lucide React** – Ícones elegantes
+- **ShadCN/UI** – Componentes de interface reutilizáveis
+
+## 🧩 Estrutura do Projeto
+
+```
+📦 src
+├── components
+│   └── ui
+│       ├── button.tsx
+│       ├── input.tsx
+│       └── card.tsx
+├── service
+│   └── feedback.ts         // Função que chama a API e retorna feedback
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Como Usar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone o repositório
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+git clone https://github.com/seu-usuario/github-feedback.git
+cd github-feedback
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+### 3. Rode a aplicação
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+## 🧾 Como Funciona
+
+### 🔹 Entrada do usuário:
+
+Um campo `Input` permite digitar o nome de usuário do GitHub.
+
+### 🔹 Requisição de feedback:
+
+Ao clicar em **"Obter Feedback"**, a função `postFeedbackByUsernameGithub` é chamada e retorna um texto em **Markdown** com o feedback do perfil.
+
+### 🔹 Loading animado:
+
+Enquanto a análise acontece, uma animação com ícones e textos exibe o progresso.
+
+### 🔹 Resultado final:
+
+O texto de feedback é renderizado com o `marked` e estilizado usando `prose` do Tailwind para uma leitura agradável.
+
+## 🖌️ Estilização Customizada
+
+A classe `.feedback-div-custom` é aplicada ao conteúdo do feedback, com estilos adicionais para listas:
+
+```css
+.feedback-div-custom ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Tailwind's gap-2 */
+}
 ```
